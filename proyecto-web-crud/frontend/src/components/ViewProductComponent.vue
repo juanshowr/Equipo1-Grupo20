@@ -30,7 +30,9 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Carro de Compras</a></div>
+                                <div class="text-center">
+                                    <router-link class="btn btn-outline-dark mt-auto" :to="{name:'detalle', params:{id: producto._id}}">Detalles</router-link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -57,7 +59,7 @@ export default {
         this.productos = res.data;
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error); 
       });
   }
 };

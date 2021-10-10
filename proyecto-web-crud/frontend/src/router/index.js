@@ -20,6 +20,21 @@ const routes = [
     component: () => import("../components/contactComponent"),
   },
   {
+    path: "/acercade",
+    name: "acercade",
+    component: () => import("../components/acercadeComponent"),
+  },
+  {
+    path: "/terminos",
+    name: "terminos",
+    component: () => import("../components/terminosComponent"),
+  },
+  {
+    path: "/detalle",
+    name: "detalle",
+    component: () => import("../components/detalleProductoComponent"),
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import("../components/loginComponent"),

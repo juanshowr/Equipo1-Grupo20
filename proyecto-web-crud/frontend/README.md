@@ -30,3 +30,24 @@ Start node server on http://localhost:4000/api
 nodemon
 
 ```
+
+heroku
+carpeta backend
+git init
+git add .
+git commit -m "version heroku backend"
+heroku create
+git push heroku master
+heroku open
+
+heroku 
+carpeta fronted
+git init
+git add .
+git commit -m "version heroku fronted"
+heroku create
+heroku buildpacks:add heroku/nodejs 
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
+
+git push heroku master
+heroku open

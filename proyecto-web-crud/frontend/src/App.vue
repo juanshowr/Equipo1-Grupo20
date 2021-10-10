@@ -32,16 +32,16 @@
                       </div>
                 </div>
             
-                <div>
+                <div class="gradiente">
                     <div class="navbar-nav ">
                     
-                        <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+                        <nav class="navbar navbar-expand-lg navbar-light">
 
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item"><router-link class="nav-link pr-3" to="/">Home</router-link></li>
                                     <li class="nav-item"><router-link class="nav-link" to="/">Tienda</router-link></li>
-                                    <li class="nav-item"><router-link class="nav-link" to="/">Nosotros</router-link></li>
+                                    <li class="nav-item"><router-link class="nav-link" to="/acercade">Acerca De</router-link></li>
                                     <li class="nav-item"><router-link class="nav-link" to="/contact">Contacto</router-link></li>
                                 </ul>
                             </div>
@@ -67,3 +67,9 @@
             </div>
   </div>
 </template>
+
+<style>
+    .gradiente {
+        background-image: linear-gradient(green, yellow, orange);
+    }
+</style>

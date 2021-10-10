@@ -32,14 +32,33 @@ app.use(
 );
 app.use(cors());
 
+//usado para el heroku
+app.use((req, res, next)=>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Resquested-With, ContentType, Accept");
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+  });
+
 // API
 app.use("/api", productAPI);
 
 // Create port -promesa-
+
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log("Connected to port " + port);
 });
+
+
+//puerto para usar en heroku
+/*
+app.set("PORT", process.env.PORT || 3000);
+app.listen(app.get("PORT"), ()=>{
+ console.log(`Server started on port:" ${app.get("PORT")}`);
+});
+*/
 
 // Find 404
 app.use((req, res, next) => {
