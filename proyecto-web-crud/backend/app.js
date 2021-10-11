@@ -24,6 +24,7 @@ mongoose
 
 const productAPI = require("../backend/routes/product.route");
 const userAPI = require("../backend/routes/user.route");
+const msgAPI = require("../backend/routes/msgContact.route");
 
 const app = express();
 app.use(bodyParser.json());
@@ -35,17 +36,18 @@ app.use(
 app.use(cors());
 
 //usado para el heroku
-app.use((req, res, next)=>{
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Resquested-With, ContentType, Accept");
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-    next();
-  });
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Resquested-With, ContentType, Accept");
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+  next();
+});
 
 // API
 app.use("/api", productAPI);
 app.use("/apiuser", userAPI);
+app.use("/apimsg", msgAPI);
 // Create port -promesa-
 
 const port = process.env.PORT || 4000;
@@ -68,7 +70,7 @@ app.use((req, res, next) => {
 });
 
 // error handler
-app.use(function(err, req, res) {
+app.use(function (err, req, res) {
   console.error(err.message);
   if (!err.statusCode) err.statusCode = 500;
   res.status(err.statusCode).send(err.message);
