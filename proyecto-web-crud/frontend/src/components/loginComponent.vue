@@ -8,7 +8,7 @@
                 <div class="title-bar">
                     <router-link class="btn-home" to="/">X</router-link><!--botón de cerrar el formulario-->
                 </div>
-                <img class="logo-lg" src="../assets/logoB.jpg" alt="Logo de El Galpón"/><!--logotipo de la empresa-->
+                <img class="logo-lg" src="../assets/logoB.png" alt="Logo de El Galpón"/><!--logotipo de la empresa-->
                 <h1>Ingresa a tu cuenta</h1>
             </header>
             <!--Formulario del login-->
