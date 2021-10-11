@@ -3,6 +3,7 @@
 
     <ul class="navbar-nav">
         <li class="nav-item"><router-link class="nav-link" to="/inventory">ir a inventario</router-link></li>
+        <li class="nav-item"><router-link class="nav-link" to="/list-user">ir a usuarios</router-link></li>
     </ul>
 
   </div>

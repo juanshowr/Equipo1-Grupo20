@@ -41,7 +41,7 @@ userRoute.route("/create-user").post((req, res, next) => {
     });
 });
 
-// Update student
+// Update user
 userRoute.route("/update-user/:id").put((req, res, next) => {
     userModel.findByIdAndUpdate(
         req.params.id,

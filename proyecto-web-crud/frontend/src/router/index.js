@@ -73,7 +73,12 @@ const routes = [
     path: "/create-user",
     name: "create-user",
     component: () => import("../components/regUserComponent"),
-  }
+  },
+  {
+    path: "/list-user",
+    name: "list-user",
+    component: () => import("../components/listUserComponent.vue"),
+  },
 
 ];
 
