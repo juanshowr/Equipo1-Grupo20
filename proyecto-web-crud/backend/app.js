@@ -45,7 +45,7 @@ app.use((req, res, next)=>{
 
 // API
 app.use("/api", productAPI);
-app.use("/api", userAPI);
+app.use("/apiuser", userAPI);
 // Create port -promesa-
 
 const port = process.env.PORT || 4000;
