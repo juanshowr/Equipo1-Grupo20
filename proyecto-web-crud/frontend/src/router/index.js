@@ -63,6 +63,16 @@ const routes = [
     path: "/cart",
     name: "cart",
     component: () => import("../components/cartComponent"),
+  },
+  {
+    path: "/update-user",
+    name: "uptate-user",
+    component: () => import("../components/actualizarUsuarioComponent"),
+  },
+  {
+    path: "/create-user",
+    name: "create-user",
+    component: () => import("../components/regUserComponent"),
   }
 
 ];

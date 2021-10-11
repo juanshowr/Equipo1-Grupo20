@@ -11,6 +11,7 @@ mongoose
   .connect(database.db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
   })
   .then(
     () => {
@@ -22,6 +23,7 @@ mongoose
   );
 
 const productAPI = require("../backend/routes/product.route");
+const userAPI = require("../backend/routes/user.route");
 
 const app = express();
 app.use(bodyParser.json());
@@ -43,7 +45,7 @@ app.use((req, res, next)=>{
 
 // API
 app.use("/api", productAPI);
-
+app.use("/api", userAPI);
 // Create port -promesa-
 
 const port = process.env.PORT || 4000;

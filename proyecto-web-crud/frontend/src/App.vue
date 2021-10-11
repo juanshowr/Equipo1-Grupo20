@@ -41,8 +41,9 @@
                                 <ul class="navbar-nav">
                                     <li class="nav-item"><router-link class="nav-link pr-3" to="/">Home</router-link></li>
                                     <li class="nav-item"><router-link class="nav-link" to="/">Tienda</router-link></li>
+                                    <li class="nav-item"><router-link class="nav-link" to="/create-user">Reg User</router-link></li>
                                     <li class="nav-item"><router-link class="nav-link" to="/acercade">Acerca De</router-link></li>
-                                    <li class="nav-item"><router-link class="nav-link" to="/contact">Contacto</router-link></li>
+                                    <li class="nav-item"><router-link class="nav-link" to="/update-user">Contacto</router-link></li>
                                 </ul>
                             </div>
                         </nav>
