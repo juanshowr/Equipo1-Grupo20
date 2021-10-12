@@ -1,0 +1,82 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    height:100vh;
+}
+.container-lg {
+    height: 320px;
+    width: 460px;
+    padding: 3px;
+    background-image: linear-gradient(green, yellow, orange);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    box-sizing: border-box;
+}
+.head-lg {
+    margin: 0px 0px 35px 0px;
+    padding: 0;
+    position: relative;
+}
+.head-lg h1 {
+    margin: 25px 5px 12px 5px;
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    position:relative;
+    left: calc(50% - 54px);
+}
+.logo-lg {
+    width: 55px;
+    height: 65px;
+    position: relative;
+    left: calc(50% - 27px);
+}
+.title-bar {
+    margin: 0;
+    padding: 0;
+}
+.btn-home {
+    background-color: #be0000;
+    border-radius: 7px;
+    border: 2px solid rgb(94, 73, 73);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+    display:flexbox;
+    position:relative;
+    top: 0%;
+    left: calc(100% - 20px)
+}
+.iconlog {
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    padding:0;
+    width: 16px;
+    height: 16px;
+}
+.container {
+    margin: 10px;
+    padding: 5px;
+    position: relative;
+
+}
+.writeuser {
+    position: absolute;
+    left: 45%;
+}
+.lbllogin {
+    margin: auto;
+    width: 152.12px;
+    font-size: small;
+    font-weight: bold;
+    text-align: right;
+    display: inline-block;
+}

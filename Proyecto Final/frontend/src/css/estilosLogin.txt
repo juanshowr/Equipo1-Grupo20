@@ -1,0 +1,77 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+    .container-lg {
+        margin: 3rem auto;
+        max-width: 30rem;
+        padding: 1rem;
+        text-align: center
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        transform: translate(50%, -25%);
+        background-image: linear-gradient(green, yellow, orange);text-align: center
+   }
+    .btn-home {
+        width: 16px;
+        height: 16px;
+        float: right;
+    }
+    .logo-lg {
+        width: 48px;
+        height: 64px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .iconlog {
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        padding:0;        margin-left: 10px;
+        margin-top: 0px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        padding:0;
+
+        width: 16px;
+        height: 16px;
+    }
+    .contenedorBoton {
+        display:block;
+        margin-top: 10px;
+    }
+    .contenedorBoton > button {
+        width:80%;
+        display: inline-flexbox;
+        margin-left: 3rem;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+   }
+   .btn.btn-link {
+       text-align:right;
+       margin: 0;
+   }
+   .etqRegistro{
+       font-weight: 400;
+       color: #007bff;
+       text-align: right;
+   }
+    .writeuser {
+        position: block;
+        left: 45%;
+        margin-bottom: 10px;
+    }
+    .lbllogin {
+        margin: auto;
+        width: 152.12px;
+        font-size: small;
+        font-weight: bold;
+        text-align: right;
+        display: inline-block;
+    }
+</style>
