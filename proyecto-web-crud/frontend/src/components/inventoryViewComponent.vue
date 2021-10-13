@@ -7,6 +7,10 @@
 
                 <ul class="nav flex-column">
                     <li class="nav-item">
+                        <label for="producto">Buscar</label>
+                        <input type="text" v-model="search" id="producto">
+                    </li>
+                    <li class="nav-item">
                         <router-link class="nav-link" to="/inventory">
                         Inventario
                         </router-link>
@@ -36,7 +40,7 @@
                             </tr>
                         </thead>
                             <tbody>
-                                <tr v-for="producto in productos" :key="producto.id">
+                                <tr v-for="producto in filterProduct" :key="producto.id">
                                     <td>{{producto.nombre}}</td>
                                     <td>{{producto.unidades}}</td>
                                     <td>{{producto.precio_compra}}</td>
@@ -65,6 +69,7 @@ export default {
   data() {
     return {
       productos: [],
+      search:''
     };
   },
   created() {
@@ -77,6 +82,13 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+  computed:{
+    filterProduct:function(){
+      return this.productos.filter((producto)=>{
+        return producto.nombre.match(this.search);
+      })
+    }
   },
   methods: {
     deleteProduct(id) {

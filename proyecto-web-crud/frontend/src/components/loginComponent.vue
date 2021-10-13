@@ -28,7 +28,7 @@
                 <!--Botón para loguearse-->
                 <div class="d-grid gap-0">
                     <router-link class="btn btn-primary btn-lg btn-block" to="/">Ingresar</router-link>
-                    <a href="#" class="btn btn-link" tabindex="-1" role="button" small-font-size="2">¿Olvidaste tu contraseña?, haz click aquí</a>
+                    <a href="/resetpwd" class="btn btn-link" tabindex="-1" role="button" small-font-size="2">¿Olvidaste tu contraseña?, haz click aquí</a>
                 </div>
                 <!--Botón para registrarse-->
                 <div class="d-grid gap-0">

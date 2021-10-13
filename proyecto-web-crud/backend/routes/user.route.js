@@ -1,7 +1,7 @@
 const express = require("express");
 const userRoute = express.Router();
 
-// Student model
+// user model
 let userModel = require("../models/Usuario");
 
 
@@ -60,7 +60,7 @@ userRoute.route("/update-user/:id").put((req, res, next) => {
     );
 });
 
-// Delete student
+// Delete user
 userRoute.route("/delete-user/:id").delete((req, res, next) => {
     userModel.findByIdAndRemove(req.params.id, (error, data) => {
         if (error) {

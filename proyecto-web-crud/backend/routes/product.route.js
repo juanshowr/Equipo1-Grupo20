@@ -1,7 +1,7 @@
 const express = require("express");
 const productRoute = express.Router();
 
-// Student model
+// product model
 let ProductModel = require("../models/Producto");
 
 //enlistar
@@ -51,7 +51,7 @@ productRoute.route("/edit-product/:id").get((req, res) => {
   });
 });
 
-// Update student
+// Update product
 productRoute.route("/update-product/:id").put((req, res, next) => {
   ProductModel.findByIdAndUpdate(
     req.params.id,
@@ -70,7 +70,7 @@ productRoute.route("/update-product/:id").put((req, res, next) => {
   );
 });
 
-// Delete student
+// Delete product
 productRoute.route("/delete-product/:id").delete((req, res, next) => {
   ProductModel.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
