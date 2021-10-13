@@ -77,8 +77,7 @@ export default {
                 email: null,
                 telefono: null,
                 asunto: null,
-                mensaje: null,
-                fecha: null
+                mensaje: null
             }
         };
     },
@@ -125,28 +124,18 @@ export default {
                 email: null,
                 telefono: null,
                 asunto: null,
-                mensaje: null,
-                fecha: null
+                mensaje: null
             };
             this.$nextTick(() => {
                 this.$v.$reset();
             });
         },
-        currentDateTime() {
-            const current = new Date();
-            const date = current.getFullYear() + '-' + (current.getMonth() + 1) + '-' + current.getDate();
-            const time = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-            const dateTime = date + ' ' + time;
-
-            return dateTime;
-        },
+        
         handleUpdateForm() {
-            let apiURL = `http://localhost:4000/api/create-msg`;
+            let apiURL = `http://localhost:4000/apimsg/create-msg`;
             if (this.$v.form.$anyError) {
                 return;
             }
-
-            this.form.fecha = this.currentDateTime();
             axios
                 .post(apiURL, this.form)
                 .then(() => {
