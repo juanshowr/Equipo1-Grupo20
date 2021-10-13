@@ -67,7 +67,7 @@ const routes = [
   {
     path: "/update-user",
     name: "uptate-user",
-    component: () => import("../components/actualizarUsuarioComponent"),
+    component: () => import("../components/updateUserComponent"),
   },
   {
     path: "/create-user",

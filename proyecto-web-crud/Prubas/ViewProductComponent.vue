@@ -1,25 +1,10 @@
 <template>
     <!-- Section-->
-         <section class="py-5">
-
-                      <!--inicio busqueda por categoria  -->
-                        <label for="categoria" class="form-label">Categoria</label>
-                          <select class="form-select" v-model="search" id="categoria" required>
-                            <option value="">Elige...</option>
-                            <option>Avicultura</option>
-                            <option>Equinos</option>
-                            <option>Ganaderia</option>
-                            <option>Mascotas</option>
-                            <option>Porcicultura</option>
-                          </select>  
-                      <!--fin busqueda por categoria  -->                
-                     
-
-
+        <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
         <!-- inicio de tarjetas -->
-                    <div class="col mb-5" v-for="producto in filterProduct" :key="producto.id" >
+                    <div class="col mb-5" v-for="producto in productos" :key="producto.id">
                         <div class="card h-100">
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
@@ -40,7 +25,7 @@
                                     </div>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">{{producto.precio_venta}}</span>
-                                    <h5 class="fw-bolder">{{producto.categoria}}</h5>
+                                    
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -64,7 +49,6 @@ export default {
   data() {
     return {
       productos: [],
-      search:''
     };
   },
   created() {
@@ -77,13 +61,6 @@ export default {
       .catch((error) => {
         console.log(error); 
       });
-  },
-  computed:{
-    filterProduct:function(){
-      return this.productos.filter((producto)=>{
-        return producto.categoria.match(this.search);
-      })
-    }
   }
 };
 </script>

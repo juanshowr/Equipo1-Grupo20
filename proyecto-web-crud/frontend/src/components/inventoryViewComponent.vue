@@ -31,7 +31,7 @@
                             <th scope="col">P.compra</th>
                             <th scope="col">P.venta</th>
                             <th scope="col">Categoria</th>
-                            <th scope="col">Detalle</th>
+                            <!-- <th scope="col">Detalle</th> -->
                             <th>acciones</th>
                             </tr>
                         </thead>
@@ -42,10 +42,10 @@
                                     <td>{{producto.precio_compra}}</td>
                                     <td>{{producto.precio_venta}}</td>
                                     <td>{{producto.categoria}}</td>
-                                    <td>{{producto.detalle}}</td>
+                                    <!-- <td>{{producto.detalle}}</td> -->
                                     <td>
-                                        <router-link class="btn btn-primary" :to="{name:'edit', params:{id: producto._id}}"><i class="bi bi-wrench"></i>Editar</router-link>
-                                        <button class="btn btn-danger" @click.prevent="deleteProduct(producto._id)"><i class="bi bi-x-lg"></i>Eliminar</button>
+                                        <router-link class="btn btn-primary" :to="{name:'edit', params:{id: producto._id}}"><i class="bi bi-wrench"></i></router-link>
+                                        <button class="btn btn-danger" @click.prevent="deleteProduct(producto._id)"><i class="bi bi-x-lg"></i></button>
                                     </td>
                                 </tr>
                             </tbody>

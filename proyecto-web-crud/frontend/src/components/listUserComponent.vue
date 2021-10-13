@@ -20,7 +20,7 @@
             </div>
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
                 <h2>Lista de Usuarios</h2>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
@@ -29,9 +29,9 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellidos</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Password</th>
+                            <!-- <th scope="col">Password</th> -->
                             <th scope="col">Telefono</th>
-                            <th scope="col">Pais</th>
+                            <!-- <th scope="col">Pais</th> -->
                             <th scope="col">Ciudad</th>
                             <th scope="col">Direccion</th>
                             <th scope="col">Clasificacion</th>
@@ -43,14 +43,14 @@
                                     <td>{{usuario.nombres}}</td>
                                     <td>{{usuario.apellidos}}</td>
                                     <td>{{usuario.email}}</td>
-                                    <td>{{usuario.password}}</td>
+                                    <!-- <td>{{usuario.password}}</td> -->
                                     <td>{{usuario.telefono}}</td>
-                                    <td>{{usuario.pais}}</td>
+                                    <!-- <td>{{usuario.pais}}</td> -->
                                     <td>{{usuario.ciudad}}</td>
                                     <td>{{usuario.direccion}}</td>
                                     <td>{{usuario.clasificacion}}</td>
                                     <td>
-                                        <router-link class="btn btn-primary" :to="{name:'edit', params:{id: usuario._id}}"><i class="bi bi-wrench"></i></router-link>
+                                        <router-link class="btn btn-primary" :to="{name:'uptate-user', params:{id: usuario._id}}"><i class="bi bi-wrench"></i></router-link>
                                         <button class="btn btn-danger" @click.prevent="deleteUser(usuario._id)"><i class="bi bi-x-lg"></i></button>
                                     </td>
                                 </tr>

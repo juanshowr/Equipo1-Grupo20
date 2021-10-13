@@ -24,7 +24,7 @@
                 <h1 class="h2">Actualizar de productos</h1>
             </div>
 
-            <!-- inicio del formulario -->
+            <!-- inicio del formulario --> 
                 <div class="col-md-7 col-lg-8">
                   <form class="needs-validation" novalidate @submit.prevent="handleUpdateForm">
                     <div class="row g-3">
