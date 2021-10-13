@@ -16,6 +16,11 @@
                         Administracion Usuarios
                         </router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/admin">
+                        Administracion
+                        </router-link>
+                    </li>
                 </ul>
             </div>
             </nav>

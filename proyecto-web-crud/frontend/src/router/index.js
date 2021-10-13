@@ -20,6 +20,16 @@ const routes = [
     component: () => import("../components/contactComponent"),
   },
   {
+    path: "/viewcontact",
+    name: "viewcontact",
+    component: () => import("../components/ViewMsgComponent"),
+  },
+  {
+    path: "/viewmsg",
+    name: "viewmsg",
+    component: () => import("../components/contactMsgViewComponent"),
+  },
+  {
     path: "/acercade",
     name: "acercade",
     component: () => import("../components/acercadeComponent"),

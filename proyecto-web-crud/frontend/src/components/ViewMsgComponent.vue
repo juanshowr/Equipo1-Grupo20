@@ -11,13 +11,8 @@
                         <input type="text" v-model="search" id="producto">
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/inventory">
-                        Inventario
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/create-product">
-                        Ingresar producto
+                        <router-link class="nav-link" to="/viewcontact">
+                        Mensajes
                         </router-link>
                     </li>
                     <li class="nav-item">
@@ -35,26 +30,22 @@
                     <table class="table table-striped table-sm">
                         <thead>
                             <tr>
-                            <th scope="col">producto</th>
-                            <th scope="col">unidades</th>
-                            <th scope="col">P.compra</th>
-                            <th scope="col">P.venta</th>
-                            <th scope="col">Categoria</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Asunto</th>
                             <!-- <th scope="col">Detalle</th> -->
                             <th>acciones</th>
                             </tr>
                         </thead>
                             <tbody>
-                                <tr v-for="producto in filterProduct" :key="producto.id">
-                                    <td>{{producto.nombre}}</td>
-                                    <td>{{producto.unidades}}</td>
-                                    <td>{{producto.precio_compra}}</td>
-                                    <td>{{producto.precio_venta}}</td>
-                                    <td>{{producto.categoria}}</td>
-                                    <!-- <td>{{producto.detalle}}</td> -->
+                                <tr v-for="mensaje in filtermsg" :key="mensaje.id">
+                                    <td>{{mensaje.nombres}}</td>
+                                    <td>{{mensaje.apellidos}}</td>
+                                    <td>{{mensaje.asunto}}</td>
+                                    <!-- <td>{{mensaje.fecha}}</td> -->
                                     <td>
-                                        <router-link class="btn btn-primary" :to="{name:'edit', params:{id: producto._id}}"><i class="bi bi-wrench"></i></router-link>
-                                        <button class="btn btn-danger" @click.prevent="deleteProduct(producto._id)"><i class="bi bi-x-lg"></i></button>
+                                        <router-link class="btn btn-primary" :to="{name:'viewmsg', params:{id: mensaje._id}}"><i class="bi bi-vinyl-fill"></i></router-link>
+                                        <button class="btn btn-danger" @click.prevent="deleteMensaje(mensaje._id)"><i class="bi bi-x-lg"></i></button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -73,38 +64,38 @@ import axios from "axios";
 export default {
   data() {
     return {
-      productos: [],
+      mensajes: [],
       search:''
     };
   },
   created() {
-    let apiURL = "http://localhost:4000/api";
+    let apiURL = "http://localhost:4000/apimsg";
     axios
       .get(apiURL)
       .then((res) => {
-        this.productos = res.data;
+        this.mensajes = res.data;
       })
       .catch((error) => {
         console.log(error);
       });
   },
   computed:{
-    filterProduct:function(){
-      return this.productos.filter((producto)=>{
-        return producto.nombre.match(this.search);
+    filtermsg:function(){
+      return this.mensajes.filter((mensaje)=>{
+        return mensaje.asunto.match(this.search);
       })
     }
   },
   methods: {
-    deleteProduct(id) {
-      let apiURL = `http://localhost:4000/api/delete-product/${id}`;
-      let indexOfArrayItem = this.productos.findIndex((i) => i._id === id);
+    deleteMensaje(id) {
+      let apiURL = `http://localhost:4000/apimsg//delete-msg/${id}`;
+      let indexOfArrayItem = this.mensajes.findIndex((i) => i._id === id);
 
-      if (window.confirm("desear eliminar el producto?")) {
+      if (window.confirm("desear eliminar el mensaje?")) {
         axios
           .delete(apiURL)
           .then(() => {
-            this.productos.splice(indexOfArrayItem, 1);
+            this.mensajes.splice(indexOfArrayItem, 1);
           })
           .catch((error) => {
             console.log(error);

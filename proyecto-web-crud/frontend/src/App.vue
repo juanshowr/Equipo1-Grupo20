@@ -30,11 +30,11 @@
                     </a>
 
                     <!-- icono de user -->
-                    <button class="btn btn-sm btn-outline-secondary" type="submit">
+<!--                     <button class="btn btn-sm btn-outline-secondary" type="submit">
                         <router-link to="/update-user">
                             <i class="bi bi-person-circle"></i>
                         </router-link>
-                    </button>
+                    </button> -->
                 </div>
             </div>
 
@@ -71,6 +71,15 @@
                     </div>
                 </div>
             </div>
+
+            <!-- prueba de carrusel -->
+                    
+
+
+            <!-- fin prueba de carrusel -->
+
+
+
         </header>
     </div>
     <!--  -->
