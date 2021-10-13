@@ -10,6 +10,11 @@
                 </div>
                 <img class="logo-lg" src="../assets/logoB.png" alt="Logo de El Galpón"/><!--logotipo de la empresa-->
                 <h1>Ingresa a tu cuenta</h1>
+                <!--Radio buttons-->
+                <input type="radio" id="rbtnadmin" name="tipoAcceso" value="admin">
+                <label class="etqradiobtn" for="rbtnadmin">Como Admin</label>
+                <input type="radio" id="rbtnuser" name="tipoAcceso" value="user" checked>
+                <label class="etqradiobtn" for="rbtnuser">Como Usuario</label>
             </header>
             <!--Formulario del login-->
             <form>
@@ -148,5 +153,8 @@
       font-weight: bold;
       text-align: right;
       display: inline-block;
+  }
+  .etqradiobtn {
+      margin-right: 25px;
   }
 </style>
