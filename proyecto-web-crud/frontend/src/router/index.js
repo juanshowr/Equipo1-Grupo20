@@ -79,6 +79,11 @@ const routes = [
     name: "list-user",
     component: () => import("../components/listUserComponent.vue"),
   },
+  {
+  path: "/resetpwd",
+  name: "resetpwd",
+  component: () => import("../components/passwordReset"),
+},
 
 ];
 
