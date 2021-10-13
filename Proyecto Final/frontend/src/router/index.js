@@ -30,7 +30,7 @@ const routes = [
     component: () => import("../components/terminosComponent"),
   },
   {
-    path: "/detalle",
+    path: "/detalle/:id",
     name: "detalle",
     component: () => import("../components/detalleProductoComponent"),
   },

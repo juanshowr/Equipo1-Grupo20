@@ -30,8 +30,9 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <!--<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>-->
-                                  <button class="btn btn-md btn-info" @click="addToCart(producto._id, 1)">Agregar al carrito</button>
+                                <div class="text-center">
+                                    <router-link class="btn btn-outline-dark mt-auto" :to="{name:'detalle', params:{id: producto._id}}">Detalles</router-link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -57,38 +58,8 @@ export default {
         this.productos = res.data;
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error); 
       });
-  },
-  //obtener productos para el carrito
-  methods: {
-    async getProducts() {
-      const res = await fetch("http://localhost:4000/product");
-      const data = await res.json();
-      this.productos = new Proxy(data.data, {});
-      console.log(this.productos);
-    },
-    async addToCart(id, quantity) {
-      try {
-        const response = await fetch("http://localhost:4000/cart", {
-          method: "POST",
-          body: JSON.stringify({
-            productId: id,
-            quantity: quantity,
-          }),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        });
-        let data = await response.json();
-        alert("Item agregado al carrito");
-        console.log(data);
-      } catch (err) {
-        alert("Algo salió mal");
-        console.log(err);
-      }
-    },
-  },
+  }
 };
-
 </script>

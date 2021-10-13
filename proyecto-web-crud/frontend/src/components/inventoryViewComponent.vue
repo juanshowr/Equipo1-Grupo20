@@ -44,8 +44,8 @@
                                     <td>{{producto.categoria}}</td>
                                     <td>{{producto.detalle}}</td>
                                     <td>
-                                        <router-link class="btn btn-danger" :to="{name:'edit', params:{id: producto._id}}">Editar</router-link>
-                                        <button @click.prevent="deleteProduct(producto._id)">Eliminar</button>
+                                        <router-link class="btn btn-primary" :to="{name:'edit', params:{id: producto._id}}"><i class="bi bi-wrench"></i>Editar</router-link>
+                                        <button class="btn btn-danger" @click.prevent="deleteProduct(producto._id)"><i class="bi bi-x-lg"></i>Eliminar</button>
                                     </td>
                                 </tr>
                             </tbody>

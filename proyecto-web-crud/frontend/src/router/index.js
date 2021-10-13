@@ -20,6 +20,21 @@ const routes = [
     component: () => import("../components/contactComponent"),
   },
   {
+    path: "/acercade",
+    name: "acercade",
+    component: () => import("../components/acercadeComponent"),
+  },
+  {
+    path: "/terminos",
+    name: "terminos",
+    component: () => import("../components/terminosComponent"),
+  },
+  {
+    path: "/detalle/:id",
+    name: "detalle",
+    component: () => import("../components/detalleProductoComponent"),
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import("../components/loginComponent"),
@@ -47,8 +62,23 @@ const routes = [
   {
     path: "/cart",
     name: "cart",
-    component: () => import("../components/cartComponent"),
-  }
+    component: () => import("../components/products/cart/CartProducts"),
+  },
+  {
+    path: "/update-user",
+    name: "uptate-user",
+    component: () => import("../components/actualizarUsuarioComponent"),
+  },
+  {
+    path: "/create-user",
+    name: "create-user",
+    component: () => import("../components/regUserComponent"),
+  },
+  {
+    path: "/list-user",
+    name: "list-user",
+    component: () => import("../components/listUserComponent.vue"),
+  },
 
 ];
 

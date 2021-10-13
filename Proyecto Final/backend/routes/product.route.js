@@ -83,4 +83,20 @@ productRoute.route("/delete-product/:id").delete((req, res, next) => {
   });
 });
 
+/*  ProductModel Update and Read by Id and delete products API's */
+// on routes that end in /products/:product_id
+// ----------------------------------------------------
+
+
+  // get the product with that id (accessed at GET http://localhost:8080/api/products/:product_id)
+productRoute.route("/detalle/:_id").get(function(req, res) {
+    ProductModel.findById(req.params.producto_id, function(err, data) {
+      if (err) {
+        res.send(err);
+      }
+      console.log("data", data);
+      res.json(data);
+    });
+   })
+
 module.exports = productRoute;
