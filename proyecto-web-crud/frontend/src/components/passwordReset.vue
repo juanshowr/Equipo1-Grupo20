@@ -20,7 +20,7 @@
       </div>
       <!--Botón de enviar-->
       <div class="d-grid gap-0">
-        <button class="btn btn-primary btn-lg btn-block" enabled="false">Siguiente</button>
+        <button class="btn btn-primary btn-sm btn-block" v-on:click.prevent="enviarCodigo" enabled="false">Solicitar código</button>
       </div>
     </form>
   </div>
@@ -30,7 +30,13 @@
 
 
 <script>
-  export default {};
+  export default {
+    methods: {
+      enviarCodigo(){
+        alert("Procedimiento en edición")
+      }
+    }
+  };
 </script>
 
 <style>
@@ -46,7 +52,6 @@ body {
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    /* transform: translate(50%, -25%); */
     background-image: linear-gradient(green, yellow, orange);
     text-align: center;
 }
