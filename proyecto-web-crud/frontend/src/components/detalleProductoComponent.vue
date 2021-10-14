@@ -22,6 +22,7 @@
                 </div>
                 <div class="col-md-5 col-lg-3">
                     <img v-bind:src="producto.imagen" alt="" width="230" height="340">
+                    <button class="btn btn-primary" id="addToCar" v-on:click="addToCart">Agregar al carrito</button>
                 </div>
           </div>
           <br>
@@ -107,7 +108,6 @@
 
 <script>
 import axios from "axios";
-
 export default {
   data() {
     return {
@@ -116,10 +116,14 @@ export default {
   },
   created() {
     let apiURL = `http://localhost:4000/api/search-product/${this.$route.params.id}`;
-
     axios.get(apiURL).then((res) => {
       this.producto = res.data;
     });
+  },
+  methods: {
+      addToCart(){
+          alert("Componente en edición");
+      }
   }
 };
 </script>
@@ -133,5 +137,10 @@ export default {
 
     #precio {
         border: 1px solid silver;
+    }
+
+    .btn-primary {
+        margin: 15px;
+        width: 100%
     }
 </style>
