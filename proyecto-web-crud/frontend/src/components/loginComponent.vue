@@ -32,7 +32,7 @@
                 </div>
                 <!--Botón para loguearse-->
                 <div class="d-grid gap-0">
-                    <router-link class="btn btn-primary btn-lg btn-block" to="/">Ingresar</router-link>
+                    <button class="btn btn-primary btn-lg btn-block" @click.prevent="gotoUser">Ingresar</button>
                     <a href="/resetpwd" class="btn btn-link" tabindex="-1" role="button" small-font-size="2">¿Olvidaste tu contraseña?, haz click aquí</a>
                 </div>
                 <!--Botón para registrarse-->
@@ -42,37 +42,27 @@
                 </div>
             </form>
         </div>
-
-
-    <ul class="navbar-nav">
-        <li class="nav-item"><router-link class="nav-link" to="/admin">Como Admin</router-link></li>
-        <li class="nav-item"><router-link class="nav-link" to="/">Como Usuario</router-link></li>
-
-    </ul>
-
-  </div>
-    
+  </div>    
 </template>
 
 
 <script>
-    import axios from "axios";
     export default {
         data() {
             return {
-            tempor: ""
+            email: "",
+            pwd: "",
+            ruta: ""
             };
         },
-        created() {
-            let apiURL = "http://localhost:4000/api/login";
-            axios
-            .get(apiURL)
-            .then((res) => {
-                this.tempor = res.data;
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        methods: {
+            gotoUser(){
+                if(document.getElementById("rbtnuser").checked){
+                    this.$router.push("/");
+                } else{
+                    this.$router.push("/admin");
+                }
+            }
         }
     };
 </script>
@@ -90,7 +80,6 @@
       padding: 1rem;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-      /* transform: translate(50%, -25%); */
       background-image: linear-gradient(green, yellow, orange);
       text-align: center;
  }
@@ -111,7 +100,8 @@
       margin-top: 0px;
       margin-right: 10px;
       margin-bottom: 0px;
-      padding:0;        margin-left: 10px;
+      padding:0;
+      margin-left: 10px;
       margin-top: 0px;
       margin-right: 10px;
       margin-bottom: 0px;
@@ -156,5 +146,6 @@
   }
   .etqradiobtn {
       margin-right: 25px;
+      margin-left: 5px;
   }
 </style>
