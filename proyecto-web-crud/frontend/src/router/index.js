@@ -94,7 +94,11 @@ const routes = [
   name: "resetpwd",
   component: () => import("../components/passwordReset"),
 },
-
+{
+  path: "/privacidad",
+  name: "privacidad",
+  component: () => import("../components/privacidadComponent"),
+}
 ];
 
 const router = new VueRouter({
