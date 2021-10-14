@@ -53,8 +53,8 @@ userRoute.route("/update-user/:id").put((req, res, next) => {
                 console.log(error);
                 return next(error);
             } else {
+                console.log("User successfully updated!");
                 res.json(data);
-                console.log("Product successfully updated!");
             }
         }
     );
