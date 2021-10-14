@@ -139,7 +139,7 @@ export default {
         border: 1px solid silver;
     }
 
-    .btn-primary {
+    #addToCar {
         margin: 15px;
         width: 100%
     }
