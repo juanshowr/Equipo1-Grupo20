@@ -14,9 +14,7 @@
                     </div>-->
                     <div class="col-md-5 col-lg-8">
                         <p id="grey_texts">
-                            Ut adipisicing tempor sint elit. Irure magna laborum esse deserunt aute officia qui amet esse. Laborum officia aute adipisicing nostrud minim aute incididunt occaecat incididunt est ullamco velit. Id ipsum duis est duis duis cillum id labore pariatur aliqua aliquip. Dolor consequat consectetur consectetur pariatur minim voluptate et incididunt nostrud. Velit esse cillum aliquip id proident eiusmod commodo excepteur. Eu laborum adipisicing do tempor qui cupidatat ex aliqua ea ut consectetur aute qui.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque est consequuntur itaque architecto. Pariatur, mollitia sequi minus esse officia deleniti! Neque expedita ratione delectus vel fugiat earum doloribus, deleniti quisquam.
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim libero fugit repellendus optio natus harum, nisi iusto vero, repudiandae, labore dignissimos molestiae dolore magnam consequatur blanditiis mollitia similique atque perspiciatis.
+                            Venta de Insumos agropecuarios, Concentrados y Alimentos para animales, Pollitos de Engorde, Droga Veterinaria, Implementos Avicolas, Sales Mineralizadas, Vacunas, Miel de Purga, Accesorios Caninos, Semillas, Instrumental e Implementos Veterinarios.
                         </p>
                     </div>
 
