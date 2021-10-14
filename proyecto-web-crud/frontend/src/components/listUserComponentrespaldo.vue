@@ -79,7 +79,6 @@ export default {
   data() {
     return {
       usuarios: [],
-      filtrado:[],
       searchname:'',
       searchlastname:''
     };
@@ -97,20 +96,9 @@ export default {
   },
   computed:{
     filteruser:function(){
-      let filtro=this.usuarios.filter((usuario)=>{
-          let filtro1='';
-          if (this.searchname || this.searchlastname) {
-            if (this.searchname) {
-                filtro1=usuario.nombres.match(this.searchname);
-            }else if(this.searchlastname){
-                filtro1=usuario.apellidos.match(this.searchlastname);
-            }
-          }else{
-            filtro1=usuario.nombres;
-          }
-          return filtro1;
+        return this.usuarios.filter((usuario)=>{
+        return usuario.nombres.match(this.searchname);
       })
-      return filtro;
       
     }
   },

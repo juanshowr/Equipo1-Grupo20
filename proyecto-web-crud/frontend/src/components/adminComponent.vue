@@ -1,12 +1,15 @@
 <template>
-  <div><p> Aqui va la ventana de administracion</p> 
+  <div>
+    
+    <div class="col-auto text-center"><h1> ADMINISTRACION</h1> </div>
 
-    <ul class="navbar-nav">
-        <li class="nav-item"><router-link class="nav-link" to="/inventory">ir a inventario</router-link></li>
-        <li class="nav-item"><router-link class="nav-link" to="/list-user">ir a usuarios</router-link></li>
-        <li class="nav-item"><router-link class="nav-link" to="/viewcontact">ir a Mensajes</router-link></li>
-    </ul>
 
+    <div>
+        <router-link class="nav-link btn btn-primary btn-lg" to="/inventory">ir a inventario</router-link>
+        <router-link class="nav-link btn btn btn-success btn-lg" to="/list-user">ir a usuarios</router-link>
+        <router-link class="nav-link btn btn-info btn-lg" to="/viewcontact">ir a Mensajes</router-link>
+    </div>
+      <br><br><br><br><br>
   </div>
     
 </template>

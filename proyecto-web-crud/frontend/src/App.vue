@@ -5,7 +5,8 @@
         <header class="blog-header py-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4 pt-1">
-                    <a class="navbar-brand" href="#">Logo</a>
+                    <!-- <a class="navbar-brand" href="#">Logo</a> -->
+                    <img class="logo-lgi navbar-brand" src="./assets/logoB.jpg" alt="Logo de El Galpón"/><!--logotipo de la empresa-->
                 </div>
 
                 <div class="col-4 d-flex justify-content-end align-items-center">
@@ -26,7 +27,7 @@
 
                     <!-- icono de login -->
                     <a class="btn btn-sm btn-outline-secondary">
-                        <router-link to="/login">Sign up</router-link>
+                        <router-link to="/login">{{estado}}</router-link>
                     </a>
 
                     <!-- icono de user -->
@@ -68,16 +69,15 @@
                     <div class="text-center text-white">
                         <h1 class="display-4 fw-bolder">EL GALPON</h1>
                         <p class="lead fw-normal text-white-50 mb-0">Agropecuaria</p>
+                            <!-- prueba de carrusel -->
+                                    
+
+
+                            <!-- fin prueba de carrusel -->
+
                     </div>
                 </div>
             </div>
-
-            <!-- prueba de carrusel -->
-                    
-
-
-            <!-- fin prueba de carrusel -->
-
 
 
         </header>
@@ -91,8 +91,53 @@
 </div>
 </template>
 
+
+<script>
+    export default {
+        data() {
+            return {
+         estado:"", 
+         estado2:localStorage.tuser
+        };
+    },
+    mounted() {
+        if (this.estado==this.estado2) {
+            console.log("estoy en el if"); 
+            console.log(this.estado, this.estado2); 
+            // location. reload()
+        }else{
+            this.estado = this.estado2;
+            console.log("estoy en el else"); 
+            console.log(this.estado, this.estado2); 
+        }
+
+
+    
+  },
+    methods: {
+        gotoUser(){
+            if(document.getElementById("rbtnuser").checked){
+                this.$router.push("/");
+                localStorage.tuser="usuario"
+            } else{
+                this.$router.push("/admin");
+                localStorage.tuser="administrador"
+            }
+        },
+    }
+    };
+</script>
+
+
 <style>
 .gradiente {
     background-image: linear-gradient(green, yellow, orange);
 }
+.logo-lgi {
+      width: 48px;
+      height: 64px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
 </style>
